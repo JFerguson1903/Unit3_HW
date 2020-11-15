@@ -52,7 +52,6 @@ function writePassword() {
     }
 
     var verifyPassword = confirm("The password needs to include:\n" + passwordCharacters);
-    console.log(verifyPassword);
     if (verifyPassword) {
         var password = generatePassword(passwordSelections, passwordString);
         var passwordText = document.querySelector("#password");
@@ -63,7 +62,6 @@ function writePassword() {
         alert("No password will be generated, please try again.");
         return;
     }
-
 }
 
 function generatePassword(passwordSelections, passwordString) {
@@ -75,7 +73,6 @@ function generatePassword(passwordSelections, passwordString) {
         finalPassword += passwordString.charAt(char)
     }
     return finalPassword;
-
 }
 
 // Add event listener to generate button
