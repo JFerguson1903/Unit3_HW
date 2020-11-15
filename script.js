@@ -37,19 +37,24 @@ function writePassword() {
         special: passwordSpecial
     };
 
-    var passwordCharacters = "A length of " + passwordLength + " characters\n"
+    var passwordCharacters = "A length of " + passwordLength + " characters\n";
+    var passwordString;
 
     if (passwordSelections.lowercase) {
-        passwordCharacters += "lowercase characters\n"
+        passwordCharacters += "lowercase characters\n";
+        passwordString += "abcdefghijklmnopqrstuvwxyz"
     }
     if (passwordSelections.uppercase) {
-        passwordCharacters += "uppercase characters\n"
+        passwordCharacters += "uppercase characters\n";
+        passwordString += "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     }
     if (passwordSelections.numeric) {
-        passwordCharacters += "numeric characters\n"
+        passwordCharacters += "numeric characters\n";
+        passwordString += "0123456789"
     }
     if (passwordSelections.special) {
-        passwordCharacters += "special characters\n"
+        passwordCharacters += "special characters\n";
+        passwordString += "!#$%&()*+,-./:;'<=>?@[\]^_{|}~";
     }
 
 
