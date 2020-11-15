@@ -48,9 +48,8 @@ function writePassword() {
     }
     if (passwordSelections.special) {
         passwordCharacters += "special characters\n";
-        passwordString += "!#$%&()*+,-./:;'<=>?@[\]^_{|}~";
+        passwordString += "!#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
     }
-
 
     var verifyPassword = confirm("The password needs to include:\n" + passwordCharacters);
     console.log(verifyPassword);
