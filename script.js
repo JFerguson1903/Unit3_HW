@@ -13,16 +13,10 @@ function writePassword() {
         return;
     }
 
-    console.log(passwordLength);
-
     var passwordLowercase = confirm("Include lowercase characters");
-    console.log(passwordLowercase);
     var passwordUppercase = confirm("Include uppercase characters");
-    console.log(passwordUppercase);
     var passwordNumeric = confirm("Include numeric characters");
-    console.log(passwordNumeric);
     var passwordSpecial = confirm("Include special characters");
-    console.log(passwordSpecial);
 
     if (passwordLowercase === false && passwordUppercase === false && passwordNumeric === false && passwordSpecial === false) {
         alert("No character types were selected, please try again.");
@@ -38,7 +32,7 @@ function writePassword() {
     };
 
     var passwordCharacters = "A length of " + passwordLength + " characters\n";
-    var passwordString;
+    var passwordString = "";
 
     if (passwordSelections.lowercase) {
         passwordCharacters += "lowercase characters\n";
@@ -58,12 +52,10 @@ function writePassword() {
     }
 
 
-    console.log(passwordSelections);
-
     var verifyPassword = confirm("The password needs to include:\n" + passwordCharacters);
     console.log(verifyPassword);
     if (verifyPassword) {
-        var password = generatePassword();
+        var password = generatePassword(passwordSelections, passwordString);
         var passwordText = document.querySelector("#password");
 
         // confirm critera selected is correct //
@@ -75,7 +67,15 @@ function writePassword() {
 
 }
 
-function generatePassword() {
+function generatePassword(passwordSelections, passwordString) {
+    var finalPassword = "";
+
+    for (i = 1; i <= passwordSelections.length; i++) {
+        var char = Math.floor(Math.random() * passwordString.length + 1);
+
+        finalPassword += passwordString.charAt(char)
+    }
+    return finalPassword;
 
 }
 
