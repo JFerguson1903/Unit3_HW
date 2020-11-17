@@ -5,8 +5,11 @@ var generateBtn = document.querySelector("#generate");
 function writePassword() {
 
     var passwordLength = prompt("Enter password length (8 to 128 characters)");
-    if (passwordLength < 8 || passwordLength > 128) {
-        alert("not within the approved range");
+    if (passwordLength === null) {
+        alert("No password will be generated, please try again.");
+        return;
+    } else if (passwordLength < 8 || passwordLength > 128) {
+        alert("Value not within the approved range");
         return;
     } else if (isNaN(passwordLength)) {
         alert("Not a valid entry, please try again.");
