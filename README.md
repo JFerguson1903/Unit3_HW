@@ -2,7 +2,7 @@
 
 ## Description
 
-I was given the assignment through Triliogy/WASHU Coding Bootcamp to create an application that an employee can use to generate a random password based on criteria they have selected.  The user story was that as an employee working with sensitive data I need to randomly generate a password that meets defined critera for a strong password to provide security.
+I was given the assignment through Triliogy/WASHU Coding Bootcamp to create an application that an employee can use to generate a random password based on criteria they have selected.  The user story was that, as an employee working with sensitive data, I need to randomly generate a password that meets defined critera for a strong password to provide security.
 
 The additional acceptance criteria was as follows:
 
@@ -24,7 +24,7 @@ Below is an image that shows what was requested for the application's appearance
 
 ![password generator demo](./Assets/03-javascript-homework-demo.png)
 
-## Crdits
+## Credits
 
 Project, HTML, CSS, & beginning JavaScript text provided by © 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
 
